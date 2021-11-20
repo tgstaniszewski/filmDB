@@ -1,0 +1,33 @@
+﻿@model FilmDB.Models.FilmModel
+
+@{
+    ViewData["Title"] = "Remove";
+}
+
+<h1>Remove</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FilmModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+    </dl>
+    
+    <form asp-action="RemoveConfim">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Potwierdz Usuniecie" class="btn btn-danger" asp-action="RemoveConfirm"/> |
+        <a asp-action="Index">Powrót</a>
+    </form>
+</div>

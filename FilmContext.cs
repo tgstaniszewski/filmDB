@@ -9,7 +9,7 @@ namespace FilmDB
 {
     public class FilmContext: DbContext
     {
-        DbSet<FilmModel> Films { get; set; }
+        public DbSet<FilmModel> Films { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

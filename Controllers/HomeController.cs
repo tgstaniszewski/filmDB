@@ -23,6 +23,12 @@ namespace FilmDB.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Add(FilmModel filmModel)
+        {
+            return null;
+        }
+
         public IActionResult Privacy()
         {
             return View();
